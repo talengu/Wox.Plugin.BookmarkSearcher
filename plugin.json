@@ -6,7 +6,7 @@
     "Author":"gutiancheng",
     "Version":"1.0",
     "Language":"python",
-    "Website":"https://github.com/talengu",
+    "Website":"https://github.com/talengu/Wox.Plugin.BookmarkSearcher",
     "IcoPath":"Images\\app.ico",
     "ExecuteFileName":"main.py"
 }
