@@ -1,0 +1,12 @@
+{
+    "ID":"bbccffxxdfs",
+    "ActionKeyword":"b",
+    "Name":"Bookmarks Seacher",
+    "Description":"search",
+    "Author":"gutiancheng",
+    "Version":"1.0",
+    "Language":"python",
+    "Website":"https://github.com/talengu",
+    "IcoPath":"Images\\app.ico",
+    "ExecuteFileName":"main.py"
+}
