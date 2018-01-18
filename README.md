@@ -11,7 +11,7 @@ Wox is open sourced at: http://www.github.com/qianlifeng/wox
 
 `BookmarkSearcher` is created as a BookmarkSearcher plugin for Wox and it can search the chrome bookmarks.
 
-BookmarkSearcher is open sourced at: https://github.com/talengu/Wox.Plugin.BookmarkSearcher
+BookmarkSearcher is writed in python and open sourced at: https://github.com/talengu/Wox.Plugin.BookmarkSearcher
 
 
 `Realse` [v1.0](https://github.com/talengu/Wox.Plugin.BookmarkSearcher/releases)

@@ -17,5 +17,11 @@ import uuid
 name = "test_name"
 namespace = "test_namespace"
 
-print(uuid.uuid1())  # 带参的方法参见Python Doc
-# 0d5efc38-fc09-11e7-9d57-38d547a9452b
+print()  # 带参的方法参见Python Doc
+
+l_uuid=str(uuid.uuid1()).split('-')
+
+s_uuid=''.join(l_uuid)
+
+print(s_uuid.upper())
+64FB733EFC0F11E7AB9638D547A9452B
