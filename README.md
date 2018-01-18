@@ -1,7 +1,7 @@
 Wox.Plugin.BookmarkSearcher
 ============================
 
-
+![demo](doc/demo.gif)
 
 ## Wox.Plugin.BookmarkSearcher
 
@@ -15,8 +15,10 @@ BookmarkSearcher is open sourced at: https://github.com/talengu/Wox.Plugin.Bookm
 
 It also can support both `zh` and `en` and so on.
 
+Done List:
+- test ok  
+
 Todo List:
--  run test
 -  speed of query which is very important
 -  IE bookmarks
 -  more

@@ -2,7 +2,7 @@ from  bookmark_searcher import bookmark_searcher
 import time
 n = bookmark_searcher()
 
-key = 'ban'
+key = '开源'
 res = n.do_search(key)
 print(res)
 print(len(res))

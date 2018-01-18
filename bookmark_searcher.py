@@ -1,16 +1,15 @@
 import json
 import os
-import time
 from pinyin.pinyin import PinYin
 
 
 class bookmark_searcher(object):
     # in windows
-    # bookmark_name = os.path.join(os.path.expanduser("~"), 'AppData//Local//Google//Chrome//User Data//Default',
-    #                             'Bookmarks')
-    # in mac
-    bookmark_name = os.path.join(os.path.expanduser("~"), 'Library/Application Support/Google/Chrome/Default',
+    bookmark_name = os.path.join(os.path.expanduser("~"), 'AppData//Local//Google//Chrome//User Data//Default',
                                  'Bookmarks')
+    # in mac
+    #bookmark_name = os.path.join(os.path.expanduser("~"), 'Library/Application Support/Google/Chrome/Default',
+            #                     'Bookmarks')
 
     def __init__(self, in_name=bookmark_name):
         self.lis = []
@@ -84,6 +83,3 @@ if __name__ == "__main__":
     res = n.do_search(key)
     print(res)
     print(len(res))
-
-
-
