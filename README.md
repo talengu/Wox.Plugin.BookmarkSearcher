@@ -27,7 +27,12 @@ Todo List:
 -  IE bookmarks
 -  more
 
+## Install
 
+`wpm install Bookmarks Searcher` 
+
+QA in [Install issue](https://github.com/talengu/Wox.Plugin.BookmarkSearcher/issues/3#issuecomment-446551442)
+ 
 ## Refs
 For the respect of the great peoples and the internet.
 
