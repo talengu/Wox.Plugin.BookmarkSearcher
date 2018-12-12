@@ -39,11 +39,10 @@ class PinYin(object):
         
         for char in string:
             key = '%X' % ord(char)
-            split_result = self.word_dict.get(key, char).split()
-            if len(split_result) > 0:
-                result.append(split_result[0][:-1].lower())
+            if not self.word_dict.get(key):    #加一条判断，当碰到非汉字的时候原字符保留
+                result.append(char)
             else:
-                result.append("")
+                result.append(self.word_dict.get(key, char).split()[0][:-1].lower())
 
         return result
 
