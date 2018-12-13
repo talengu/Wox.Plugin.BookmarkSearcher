@@ -91,12 +91,12 @@ class esedbHandler(object):
         self.esedb_file.open(EDB)
         for table in self.esedb_file.tables:
             if len(table.records) > 0:
-                print(table.name + "--------------------------------------------------talen")
+                print(table.name +" "+ str(len(table.records))+"--------------------------------------------------talen")
                 print(self.get_table_value(table.name))
         #TABLE = pyesedb.table()
 
 
-    def get_table_value(self,table_name="TopSites"):
+    def get_table_value(self,table_name="Favorites"):
         table = self.esedb_file.get_table_by_name(table_name)
         column_names = []
         for column in table.columns:
@@ -112,6 +112,7 @@ class esedbHandler(object):
             )
             items_to_insert.append(enum_record)
         return items_to_insert
+
     def _EnumerateRecord(self, num_of_columns, record):
         '''Enumerate vales for a record
 
@@ -151,6 +152,17 @@ class esedbHandler(object):
         if data is None:
             item = {name: None}
             return item
+
+        if name =='URL':
+            print("URL "+data.decode('utf-16le'))
+            # value = self._GetCustomValue(
+            #     SrumHandler.CUSTOM_COLUMNS[name],
+            #     data
+            # )
+            # item = {name: value}
+            # return item
+        if name=='Title':
+            print("title " + data.decode('utf-16le'))
 
 
         if dtype == DBTYPES.DOUBLE_64BIT:

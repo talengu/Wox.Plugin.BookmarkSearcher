@@ -24,4 +24,4 @@ l_uuid=str(uuid.uuid1()).split('-')
 s_uuid=''.join(l_uuid)
 
 print(s_uuid.upper())
-64FB733EFC0F11E7AB9638D547A9452B
+# 64FB733EFC0F11E7AB9638D547A9452B
