@@ -1,4 +1,6 @@
-use=chrome,edge
+use=chrome
+#use=chrome,chromium,edge
 chrome=AppData\Local\Google\Chrome\User Data\Profile 1
+chromium=AppData\Local\Chromium\User Data\Default
 edge=AppData\Local\Packages\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\AC\MicrosoftEdge\User\Default\DataStore\Data\nouser1\120712-0049\DBStore
 #edge=AppData\\Local\\Packages\\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\\AC\\MicrosoftEdge\\User\\Default\\DataStore\\Data\\nouser1\\120712-0049\\DBStore

@@ -20,6 +20,9 @@ class bookmark_searcher(object):
         chrome_bookmark = os.path.join(os.path.expanduser("~"),
                                        self.cfg_dict['chrome'],
                                        'Bookmarks')
+        chromium_bookmark = os.path.join(os.path.expanduser("~"),
+                                       self.cfg_dict['chromium'],
+                                       'Bookmarks')
 
         edge_bookmark_db = os.path.join(os.path.expanduser("~"),
                                         self.cfg_dict['edge'],
@@ -28,6 +31,9 @@ class bookmark_searcher(object):
         use_list = self.cfg_dict['use'].split(',')
         if "chrome" in use_list:
             self.lis += chrome.get_chrome_list(chrome_bookmark)
+        # if "chromium" in use_list:
+        #     self.lis += chrome.get_chrome_list(chromium_bookmark)
+
         # if "edge" in use_list:
         #     self.lis += edge.get_edge_list(edge_bookmark_db)
 
