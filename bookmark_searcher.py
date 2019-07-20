@@ -14,7 +14,7 @@ class bookmark_searcher(object):
     def __init__(self, in_name=bookmark_name):
         self.lis = []
         data = self.load(in_name)
-        child_items = data['roots']['bookmark_bar']['children']
+        child_items = data['roots']['bookmark_bar']['children'] + data['roots']['other']['children']
         self.make_list(child_items)  # 将数据准备好
         self.pinyin_item()  # 将pinyin准备好
 
