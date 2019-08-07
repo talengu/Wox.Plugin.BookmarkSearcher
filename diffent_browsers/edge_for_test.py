@@ -99,8 +99,8 @@ def GetWinTimeStamp(raw_timestamp):
 
 
 class esedbHandler(object):
-    def __init__(self):
-        EDB = "..\\demo_datas\\DBStore\\spartan.edb"
+    def __init__(self,EDB):
+
         self.esedb_file = pyesedb.file()
         self.esedb_file.open(EDB)
         for table in self.esedb_file.tables:
@@ -221,7 +221,12 @@ class esedbHandler(object):
         return item
 
 if __name__ == '__main__':
-    m=esedbHandler()
+    import os
+    edge_bookmark_db = os.path.join(os.path.expanduser("~"),
+                                    'AppData\\Local\\Packages\\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\\AC\\MicrosoftEdge\\User\\Default\\DataStore\\Data\\nouser1\\120712-0049\\DBStore',
+                              'spartan.edb')
+    EDB = "..\\demo_datas\\DBStore\\spartan.edb"
+    m=esedbHandler(edge_bookmark_db)
     print("---------------------------------------------------")
     print(m.get_table_value())
 

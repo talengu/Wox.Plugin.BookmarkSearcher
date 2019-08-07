@@ -1,2 +1,6 @@
 .idea/*
 __pycache__/*
+cache/*
+libesedb-20170121/*
+demo_datas/*
+**/__pycache__/**

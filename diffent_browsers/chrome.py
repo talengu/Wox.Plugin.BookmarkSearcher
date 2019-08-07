@@ -28,7 +28,7 @@ def make_list(lis, child_items):
             # print(type(item['children']))
             make_list(lis, item['children'])
         else:
-            mItem = [item['name'], item['url'], item['date_added'], '']
+            mItem = [item['name'], item['url'], int(item['date_added']), '']
             lis.append(mItem)
             # print(item['name'],item['url'])
 

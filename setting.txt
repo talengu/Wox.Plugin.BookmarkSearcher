@@ -1,4 +1,4 @@
-use=chrome
+use=chrome,edge
 #use=chrome,chromium,edge
 chrome=AppData\Local\Google\Chrome\User Data\Profile 1
 chromium=AppData\Local\Chromium\User Data\Default

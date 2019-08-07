@@ -21,12 +21,12 @@ class bookmark_searcher(object):
                                        self.cfg_dict['chrome'],
                                        'Bookmarks')
         chromium_bookmark = os.path.join(os.path.expanduser("~"),
-                                       self.cfg_dict['chromium'],
-                                       'Bookmarks')
+                                         self.cfg_dict['chromium'],
+                                         'Bookmarks')
 
-        edge_bookmark_db = os.path.join(os.path.expanduser("~"),
-                                        self.cfg_dict['edge'],
-                                        'spartan.edb')
+        self.edge_bookmark_db = os.path.join(os.path.expanduser("~"),
+                                             self.cfg_dict['edge'],
+                                             'spartan.edb')
 
         use_list = self.cfg_dict['use'].split(',')
         if "chrome" in use_list:
@@ -34,8 +34,8 @@ class bookmark_searcher(object):
         # if "chromium" in use_list:
         #     self.lis += chrome.get_chrome_list(chromium_bookmark)
 
-        # if "edge" in use_list:
-        #     self.lis += edge.get_edge_list(edge_bookmark_db)
+        if "edge" in use_list:
+            self.lis += edge.update_edge(self.edge_bookmark_db)
 
         self.pinyin_item()  # 将pinyin准备好
 
@@ -68,12 +68,19 @@ class bookmark_searcher(object):
 
     def do_search(self, key):
         result_lis = []
+        if key == "update edge":  # update edge的bookmarks 因为当edge打开的时候关闭了。
+            #edge.update_edge(self.edge_bookmark_db, isUpdate=True)
+            import shutil
+            shutil.rmtree('cache')
+            return [["update edge It will closing Edge", '']]
+
         for item in self.lis:
             # 将单词变为low 方便索引
             if item[0].lower().find(key) != -1 or item[0].lower().find(key.lower()) != -1 \
                     or item[1].lower().find(key) != -1 \
                     or item[3].find(key) != -1:
                 result_lis.append(item)
+
         # 按照时间进行排序
         search_result = sorted(result_lis, key=lambda x: x[2], reverse=True)
         return [x[:2] for x in search_result]
@@ -88,7 +95,7 @@ class bookmark_searcher(object):
 if __name__ == "__main__":
     n = bookmark_searcher()
 
-    key = 'abc'
+    key = 'up'
     res = n.do_search(key)
     print(res)
     print(len(res))
