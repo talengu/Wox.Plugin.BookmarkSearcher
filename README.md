@@ -44,3 +44,12 @@ Dev pinyin support ref: http://www.jb51.net/article/65496.htm
 Thank you !!!
 
 MIT LICENSE HERE
+
+
+NEW!!!
+It's brother window switch.
+
+Wox.Plugin.WindowSwitcher
+============================
+
+![demo](https://user-images.githubusercontent.com/10290923/170521354-cfd5387f-4591-4fd8-87e9-25b40057433a.gif)
