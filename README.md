@@ -46,10 +46,13 @@ Thank you !!!
 MIT LICENSE HERE
 
 
-NEW!!!
+## NEW!!!
 It's brother window switch.
 
+Hit: https://github.com/talengu/Wox.Plugin.WindowSwitcher
+
+
 Wox.Plugin.WindowSwitcher
-============================
+
 
 ![demo](https://user-images.githubusercontent.com/10290923/170521354-cfd5387f-4591-4fd8-87e9-25b40057433a.gif)
